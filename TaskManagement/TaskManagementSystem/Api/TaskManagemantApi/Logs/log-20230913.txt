@@ -1,0 +1,16 @@
+2023-09-13 13:19:17.660 +01:00 [INF] Starting webHost
+2023-09-13 13:43:06.567 +01:00 [INF] User Created Succefully SolaSolaAdeAde@gmail.com
+2023-09-13 13:43:06.800 +01:00 [ERR] Error occured when SolaSolaAdeAde@gmail.com was about to register  Error Message : Role APPUSER does not exist.
+2023-09-13 13:52:32.916 +01:00 [INF] Starting webHost
+2023-09-13 13:56:51.246 +01:00 [INF] User Created Succefully SolaAdeAde@gmail.com
+2023-09-13 13:56:51.443 +01:00 [ERR] Error occured when SolaAdeAde@gmail.com was about to register  Error Message : Role APPUSER does not exist.
+2023-09-13 13:59:38.313 +01:00 [INF] User withSolaAdeAde@gmail.com is about to login
+2023-09-13 13:59:42.549 +01:00 [INF] User with  SolaAdeAde@gmail.com  Loged in Succesfully
+2023-09-13 13:59:54.984 +01:00 [INF] User withSolaSolaAdeAde@gmail.com is about to login
+2023-09-13 13:59:55.063 +01:00 [INF] User with  SolaSolaAdeAde@gmail.com  Loged in Succesfully
+2023-09-13 14:01:38.692 +01:00 [INF] User withSolaAdeAde@gmail.com is about to login
+2023-09-13 14:01:38.747 +01:00 [INF] User with  SolaAdeAde@gmail.com  Loged in Succesfully
+2023-09-13 14:01:58.205 +01:00 [INF] User withSolaAdeAde@gmail.com is about to login
+2023-09-13 14:01:58.281 +01:00 [INF] User with  SolaAdeAde@gmail.com  Loged in Succesfully
+2023-09-13 14:07:10.621 +01:00 [INF] Token Generated successfully
+2023-09-13 14:15:00.189 +01:00 [INF] Starting webHost

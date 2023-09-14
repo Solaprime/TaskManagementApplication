@@ -1,0 +1,2 @@
+2023-09-12 22:16:30.125 +01:00 [INF] Starting webHost
+2023-09-12 22:31:46.176 +01:00 [INF] Starting webHost

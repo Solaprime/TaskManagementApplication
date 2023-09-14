@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="MailKit" Version="4.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.10" />
+		<PackageReference Include="Serilog" Version="2.10.0" />
+	</ItemGroup>
+	<ItemGroup>
+    <ProjectReference Include="..\..\Core.Shared\AppShared\AppShared.csproj" />
+  </ItemGroup>
+
+</Project>

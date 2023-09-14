@@ -1,0 +1,13 @@
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\bin\Debug\netcoreapp3.1\AppShared.deps.json
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\bin\Debug\netcoreapp3.1\AppShared.dll
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\bin\Debug\netcoreapp3.1\AppShared.pdb
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\obj\Debug\netcoreapp3.1\AppShared.csproj.AssemblyReference.cache
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\obj\Debug\netcoreapp3.1\AppShared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\obj\Debug\netcoreapp3.1\AppShared.AssemblyInfoInputs.cache
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\obj\Debug\netcoreapp3.1\AppShared.AssemblyInfo.cs
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\obj\Debug\netcoreapp3.1\AppShared.csproj.CoreCompileInputs.cache
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\obj\Debug\netcoreapp3.1\AppShared.dll
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\obj\Debug\netcoreapp3.1\AppShared.pdb
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\bin\Debug\netcoreapp3.1\TaskDomain.dll
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\bin\Debug\netcoreapp3.1\TaskDomain.pdb
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Shared\AppShared\obj\Debug\netcoreapp3.1\AppShared.csproj.CopyComplete

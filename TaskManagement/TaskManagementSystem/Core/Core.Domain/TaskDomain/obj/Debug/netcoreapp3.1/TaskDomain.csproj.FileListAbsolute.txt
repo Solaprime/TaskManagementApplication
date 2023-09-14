@@ -1,0 +1,10 @@
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Domain\TaskDomain\obj\Debug\netcoreapp3.1\TaskDomain.csproj.AssemblyReference.cache
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Domain\TaskDomain\obj\Debug\netcoreapp3.1\TaskDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Domain\TaskDomain\obj\Debug\netcoreapp3.1\TaskDomain.AssemblyInfoInputs.cache
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Domain\TaskDomain\obj\Debug\netcoreapp3.1\TaskDomain.AssemblyInfo.cs
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Domain\TaskDomain\obj\Debug\netcoreapp3.1\TaskDomain.csproj.CoreCompileInputs.cache
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Domain\TaskDomain\bin\Debug\netcoreapp3.1\TaskDomain.deps.json
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Domain\TaskDomain\bin\Debug\netcoreapp3.1\TaskDomain.dll
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Domain\TaskDomain\bin\Debug\netcoreapp3.1\TaskDomain.pdb
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Domain\TaskDomain\obj\Debug\netcoreapp3.1\TaskDomain.dll
+C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Domain\TaskDomain\obj\Debug\netcoreapp3.1\TaskDomain.pdb
