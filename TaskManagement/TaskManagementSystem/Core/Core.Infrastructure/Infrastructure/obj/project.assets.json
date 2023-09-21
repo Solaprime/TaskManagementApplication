@@ -1454,11 +1454,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Infrastructure\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Infrastructure\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Infrastructure\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Infrastructure\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Arinola\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Infrastructure\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Infrastructure\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -1482,8 +1482,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj": {
-              "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj"
+            "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj": {
+              "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj": {}
+    "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj": {
+    "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj",
         "projectName": "TaskApplication",
-        "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj",
+        "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj",
         "packagesPath": "C:\\Users\\Arinola\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\obj\\",
+        "outputPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -35,11 +35,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj": {
-                "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj"
+              "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj": {
+                "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj"
               },
-              "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj": {
-                "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj"
+              "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj": {
+                "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj"
               }
             }
           }
@@ -98,14 +98,14 @@
         }
       }
     },
-    "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj": {
+    "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj",
+        "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj",
         "projectName": "TaskDomain",
-        "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj",
+        "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj",
         "packagesPath": "C:\\Users\\Arinola\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\obj\\",
+        "outputPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -165,14 +165,14 @@
         }
       }
     },
-    "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj": {
+    "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj",
+        "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj",
         "projectName": "AppShared",
-        "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj",
+        "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj",
         "packagesPath": "C:\\Users\\Arinola\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\obj\\",
+        "outputPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -196,8 +196,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj": {
-                "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj"
+              "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj": {
+                "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj"
               }
             }
           }

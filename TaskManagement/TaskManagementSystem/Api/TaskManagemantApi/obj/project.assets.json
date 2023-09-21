@@ -8095,11 +8095,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Api\\TaskManagemantApi\\TaskManagemantApi.csproj",
+      "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Api\\TaskManagemantApi\\TaskManagemantApi.csproj",
       "projectName": "TaskManagemantApi",
-      "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Api\\TaskManagemantApi\\TaskManagemantApi.csproj",
+      "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Api\\TaskManagemantApi\\TaskManagemantApi.csproj",
       "packagesPath": "C:\\Users\\Arinola\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Api\\TaskManagemantApi\\obj\\",
+      "outputPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Api\\TaskManagemantApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -8123,20 +8123,20 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj": {
-              "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj"
+            "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj": {
+              "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj"
             },
-            "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj": {
-              "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj"
+            "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj": {
+              "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj"
             },
-            "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Infrastructure\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Infrastructure\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Infrastructure\\Infrastructure\\Infrastructure.csproj"
             },
-            "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Persistence\\TaskPersistence\\TaskPersistence.csproj": {
-              "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Persistence\\TaskPersistence\\TaskPersistence.csproj"
+            "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Persistence\\TaskPersistence\\TaskPersistence.csproj": {
+              "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Persistence\\TaskPersistence\\TaskPersistence.csproj"
             },
-            "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj": {
-              "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj"
+            "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj": {
+              "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Shared\\AppShared\\AppShared.csproj"
             }
           }
         }

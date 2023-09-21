@@ -1,0 +1,260 @@
+2023-09-19 11:22:05.976 +01:00 [INF] Starting webHost
+2023-09-19 11:22:22.715 +01:00 [INF] Start installing Hangfire SQL objects...
+2023-09-19 11:22:46.052 +01:00 [INF] Hangfire SQL objects installed.
+2023-09-19 11:22:49.247 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@TaskManagementHangfireDb'
+2023-09-19 11:22:49.248 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2023-09-19 11:22:49.249 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 10
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-09-19 11:22:52.440 +01:00 [INF] Server desktop-knvutuc:9620:fd599cae successfully announced in 3035.0838 ms
+2023-09-19 11:22:52.451 +01:00 [INF] Server desktop-knvutuc:9620:fd599cae is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-09-19 11:22:52.561 +01:00 [INF] Server desktop-knvutuc:9620:fd599cae all the dispatchers started
+2023-09-19 11:36:37.005 +01:00 [ERR] An error Occured System.InvalidOperationException: The LINQ expression 'DbSet<Tasks>
+    .Where(t => t.DueDate
+        .IsDueSoon(__parameters_DueForCurrent_0))' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TaskPersistence.Repositories.TaskRepository.GetTaskBased(TaskResourceParameters parameters) in C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Persistence\TaskPersistence\Repositories\TaskRepository.cs:line 93
+2023-09-19 11:41:10.644 +01:00 [ERR] An error Occured System.InvalidOperationException: The LINQ expression 'DbSet<Tasks>
+    .Where(t => t.DueDate
+        .IsDueSoon(__parameters_DueForCurrent_0))' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TaskPersistence.Repositories.TaskRepository.GetTaskBased(TaskResourceParameters parameters) in C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Persistence\TaskPersistence\Repositories\TaskRepository.cs:line 93
+2023-09-19 11:44:01.720 +01:00 [ERR] An error Occured System.InvalidOperationException: The LINQ expression 'DbSet<Tasks>
+    .Where(t => t.DueDate
+        .IsDueSoon(__parameters_DueForCurrent_0))' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TaskPersistence.Repositories.TaskRepository.GetTaskBased(TaskResourceParameters parameters) in C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Persistence\TaskPersistence\Repositories\TaskRepository.cs:line 93
+2023-09-19 11:44:27.125 +01:00 [ERR] An error Occured System.InvalidOperationException: The LINQ expression 'DbSet<Tasks>
+    .Where(t => t.DueDate
+        .IsDueSoon(__parameters_DueForCurrent_0))' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TaskPersistence.Repositories.TaskRepository.GetTaskBased(TaskResourceParameters parameters) in C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Persistence\TaskPersistence\Repositories\TaskRepository.cs:line 93
+2023-09-19 11:51:48.014 +01:00 [INF] Starting webHost
+2023-09-19 11:52:28.189 +01:00 [INF] Start installing Hangfire SQL objects...
+2023-09-19 11:52:33.251 +01:00 [INF] Hangfire SQL objects installed.
+2023-09-19 11:52:34.846 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@TaskManagementHangfireDb'
+2023-09-19 11:52:34.852 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2023-09-19 11:52:34.853 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 10
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-09-19 11:52:39.752 +01:00 [INF] Server desktop-knvutuc:11508:fd848207 successfully announced in 4450.1555 ms
+2023-09-19 11:52:39.824 +01:00 [INF] Server desktop-knvutuc:11508:fd848207 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-09-19 11:52:42.004 +01:00 [INF] Server desktop-knvutuc:11508:fd848207 all the dispatchers started
+2023-09-19 12:48:10.990 +01:00 [INF] Starting webHost
+2023-09-19 12:49:30.638 +01:00 [INF] Start installing Hangfire SQL objects...
+2023-09-19 12:49:59.875 +01:00 [INF] Hangfire SQL objects installed.
+2023-09-19 12:50:01.641 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@TaskManagementHangfireDb'
+2023-09-19 12:50:01.643 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2023-09-19 12:50:01.644 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 10
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-09-19 12:50:16.545 +01:00 [INF] Server desktop-knvutuc:6308:38b930b7 successfully announced in 14265.3472 ms
+2023-09-19 12:50:17.575 +01:00 [INF] Server desktop-knvutuc:6308:38b930b7 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-09-19 12:50:29.874 +01:00 [INF] Server desktop-knvutuc:6308:38b930b7 all the dispatchers started
+2023-09-19 12:50:30.608 +01:00 [INF] 2 servers were removed due to timeout
+2023-09-19 12:59:58.904 +01:00 [ERR] Execution DelayedJobScheduler is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   at Hangfire.SqlServer.SqlServerDistributedLock.Acquire(IDbConnection connection, String resource, TimeSpan timeout)
+   at Hangfire.SqlServer.SqlServerConnection.AcquireLock(String resource, TimeSpan timeout)
+   at Hangfire.SqlServer.SqlServerConnection.AcquireDistributedLock(String resource, TimeSpan timeout)
+   at Hangfire.Server.DelayedJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action)
+   at Hangfire.Server.DelayedJobScheduler.EnqueueNextScheduledJobs(BackgroundProcessContext context)
+   at Hangfire.Server.DelayedJobScheduler.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:a475d9a8-e33e-40d3-833f-1fdd23e993a6
+Error Number:-2,State:0,Class:11
+2023-09-19 13:00:40.137 +01:00 [INF] Execution DelayedJobScheduler recovered from the Failed state after 00:00:33.5107328 and is in the Running state now
+2023-09-19 13:27:07.282 +01:00 [ERR] An error Occured System.InvalidCastException: Unable to cast object of type 'WhereListIterator`1[TaskDomain.Entities.Tasks]' to type 'System.Collections.Generic.List`1[TaskDomain.Entities.Tasks]'.
+   at TaskPersistence.Repositories.TaskRepository.GetTaskBased(TaskResourceParameters parameters)
+2023-09-19 13:32:00.105 +01:00 [ERR] An error Occured System.InvalidCastException: Unable to cast object of type 'WhereListIterator`1[TaskDomain.Entities.Tasks]' to type 'System.Collections.Generic.List`1[TaskDomain.Entities.Tasks]'.
+   at TaskPersistence.Repositories.TaskRepository.GetTaskBased(TaskResourceParameters parameters)
+2023-09-19 13:42:11.534 +01:00 [INF] Starting webHost
+2023-09-19 13:42:40.119 +01:00 [INF] Start installing Hangfire SQL objects...
+2023-09-19 13:42:46.839 +01:00 [INF] Hangfire SQL objects installed.
+2023-09-19 13:42:48.283 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@TaskManagementHangfireDb'
+2023-09-19 13:42:48.287 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2023-09-19 13:42:48.296 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 10
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-09-19 13:42:57.074 +01:00 [INF] Server desktop-knvutuc:452:997891ae successfully announced in 8100.6778 ms
+2023-09-19 13:42:57.209 +01:00 [INF] Server desktop-knvutuc:452:997891ae is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-09-19 13:42:57.907 +01:00 [INF] 1 servers were removed due to timeout
+2023-09-19 13:43:02.641 +01:00 [INF] Server desktop-knvutuc:452:997891ae all the dispatchers started
+2023-09-19 13:57:54.291 +01:00 [INF] An Api Call to Assign Task To a uSER  
+2023-09-19 13:59:04.187 +01:00 [INF]  send Email to A new Task Demo Title created by SolaAdeAde@gmail.com  with due date 9/29/2023 12:00:00 AM +01:00 was assigned to you with succesfully
+2023-09-19 14:05:08.580 +01:00 [ERR] Execution RecurringJobScheduler is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   at Hangfire.SqlServer.SqlServerDistributedLock.Acquire(IDbConnection connection, String resource, TimeSpan timeout)
+   at Hangfire.SqlServer.SqlServerConnection.AcquireLock(String resource, TimeSpan timeout)
+   at Hangfire.SqlServer.SqlServerConnection.AcquireDistributedLock(String resource, TimeSpan timeout)
+   at Hangfire.Server.RecurringJobScheduler.UseConnectionDistributedLock(JobStorage storage, Func`2 action)
+   at Hangfire.Server.RecurringJobScheduler.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:a585f9d6-f407-470c-92b8-055d22aa845a
+Error Number:-2,State:0,Class:11
+2023-09-19 14:05:05.232 +01:00 [ERR] Execution DelayedJobScheduler is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   at Hangfire.SqlServer.SqlServerDistributedLock.Acquire(IDbConnection connection, String resource, TimeSpan timeout)
+   at Hangfire.SqlServer.SqlServerConnection.AcquireLock(String resource, TimeSpan timeout)
+   at Hangfire.SqlServer.SqlServerConnection.AcquireDistributedLock(String resource, TimeSpan timeout)
+   at Hangfire.Server.DelayedJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action)
+   at Hangfire.Server.DelayedJobScheduler.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:37c36f18-10c9-48bc-8f14-5d677eb5354c
+Error Number:-2,State:0,Class:11
+2023-09-19 14:05:53.467 +01:00 [INF] Execution RecurringJobScheduler recovered from the Failed state after 00:00:30.5990524 and is in the Running state now
+2023-09-19 14:05:53.477 +01:00 [INF] Execution DelayedJobScheduler recovered from the Failed state after 00:00:30.5930699 and is in the Running state now
+2023-09-19 14:07:49.291 +01:00 [INF] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:38.0789987 and is in the Running state now
+2023-09-19 14:07:51.253 +01:00 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:51.1699460 and is in the Running state now
+2023-09-19 14:16:02.933 +01:00 [INF] An Api Call to Add Task To Projeect 
+2023-09-19 14:16:14.136 +01:00 [INF]  send Email to A Task Demo Title created by SolaAdeAde@gmail.com  with description Demo Descriptiom has been Completed  succesfully
+2023-09-19 14:17:42.296 +01:00 [INF] An Api Call to Add Task To Projeect 
+2023-09-19 14:44:27.605 +01:00 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:29.0715026 and is in the Running state now
+2023-09-19 15:20:50.738 +01:00 [INF] Starting webHost
+2023-09-19 15:21:08.965 +01:00 [INF] Start installing Hangfire SQL objects...
+2023-09-19 15:21:15.669 +01:00 [INF] Hangfire SQL objects installed.
+2023-09-19 15:21:17.067 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@TaskManagementHangfireDb'
+2023-09-19 15:21:17.070 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2023-09-19 15:21:17.071 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 10
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-09-19 15:21:19.298 +01:00 [INF] Server desktop-knvutuc:5104:fc4ef78b successfully announced in 2086.4127 ms
+2023-09-19 15:21:19.332 +01:00 [INF] Server desktop-knvutuc:5104:fc4ef78b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-09-19 15:21:19.534 +01:00 [INF] 1 servers were removed due to timeout
+2023-09-19 15:21:19.997 +01:00 [INF] Server desktop-knvutuc:5104:fc4ef78b all the dispatchers started
+2023-09-19 15:35:59.019 +01:00 [INF] Starting webHost
+2023-09-19 15:36:03.523 +01:00 [INF] Start installing Hangfire SQL objects...
+2023-09-19 15:36:07.174 +01:00 [INF] Hangfire SQL objects installed.
+2023-09-19 15:36:07.921 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@TaskManagementHangfireDb'
+2023-09-19 15:36:07.922 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2023-09-19 15:36:07.923 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 10
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-09-19 15:36:11.274 +01:00 [INF] Server desktop-knvutuc:13028:bd98ae3f successfully announced in 3002.8349 ms
+2023-09-19 15:36:11.493 +01:00 [INF] Server desktop-knvutuc:13028:bd98ae3f is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-09-19 15:36:13.277 +01:00 [INF] Server desktop-knvutuc:13028:bd98ae3f all the dispatchers started
+2023-09-19 15:40:33.937 +01:00 [INF] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:25.2607641 and is in the Running state now
+2023-09-19 15:40:33.940 +01:00 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:25.2902758 and is in the Running state now
+2023-09-19 15:41:12.001 +01:00 [INF] 1 servers were removed due to timeout
+2023-09-19 15:42:43.538 +01:00 [INF] Starting webHost
+2023-09-19 15:43:35.619 +01:00 [INF] Start installing Hangfire SQL objects...
+2023-09-19 15:43:54.085 +01:00 [INF] Hangfire SQL objects installed.
+2023-09-19 15:43:55.932 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@TaskManagementHangfireDb'
+2023-09-19 15:43:55.934 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2023-09-19 15:43:55.935 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 10
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-09-19 15:44:11.551 +01:00 [INF] Server desktop-knvutuc:5100:aa247bc3 successfully announced in 13633.2279 ms
+2023-09-19 15:44:11.950 +01:00 [INF] Server desktop-knvutuc:5100:aa247bc3 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-09-19 15:44:17.663 +01:00 [INF] Server desktop-knvutuc:5100:aa247bc3 all the dispatchers started

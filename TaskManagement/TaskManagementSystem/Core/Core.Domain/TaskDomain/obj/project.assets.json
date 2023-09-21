@@ -804,11 +804,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj",
+      "projectUniqueName": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj",
       "projectName": "TaskDomain",
-      "projectPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj",
+      "projectPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\TaskDomain.csproj",
       "packagesPath": "C:\\Users\\Arinola\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\obj\\",
+      "outputPath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Domain\\TaskDomain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

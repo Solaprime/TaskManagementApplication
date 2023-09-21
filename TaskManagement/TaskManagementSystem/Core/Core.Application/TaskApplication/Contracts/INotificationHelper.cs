@@ -13,5 +13,10 @@ namespace TaskApplication.Contracts
         string GenerateTaskCompleteEmailTemplate(Tasks task);
         Notification GenerateNotificationForTaskExpiry(Tasks task);
         string GenerateTaskExpiryEmailTemplate(Tasks task);
+
+        string GenerateTaskAssignedToProjectEmailTemplate(Tasks task);
+        Notification GenerateNotificationForTaskAssgnedToProject(Tasks task);
+        string GenerateTaskRemoveFromProjectEmailTemplate(Tasks task);
+        Notification GenerateNotificationForTaskRemovedFromProject(Tasks task);
     }
 }

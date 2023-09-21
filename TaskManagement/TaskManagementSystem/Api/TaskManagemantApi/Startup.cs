@@ -48,7 +48,7 @@ namespace TaskManagemantApi
             //SwaggerConfiguration
             services.AddSwaggerGen(setupAction =>
             {
-                    setupAction.SwaggerDoc($"LibraryOpenApiSpecification",
+                  setupAction.SwaggerDoc($"LibraryOpenApiSpecification",
                   new Microsoft.OpenApi.Models.OpenApiInfo()
                   {
                    Title = "TaskManageManetApi",
@@ -74,9 +74,8 @@ namespace TaskManagemantApi
                         }, new List<string>()
                    }
                });
-
-                 services.AddHostedService<TaskExpiryNotification>();
             });
+            services.AddHostedService<TaskExpiryNotification>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

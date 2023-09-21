@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B27/JFYp6IYu7oZSXnI93t54IUDs5VTeDxx91RHjeQqDfSqW/OZEr+iMxv+A0MXI7NKlrM/Y9bklZmAZ/KcCBQ==",
+  "dgSpecHash": "2gz5j9OuC3o/HsjVpkdJxMN8fE6zyOobngZRp8fOzPxNGvG+qT6USEyD5ydFh8YbfXwg3Gcrwa1gWOCw75hj2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arinola\\Desktop\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj",
+  "projectFilePath": "C:\\Users\\Arinola\\Desktop\\Flow\\TaskManagement\\TaskManagementSystem\\Core\\Core.Application\\TaskApplication\\TaskApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arinola\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Arinola\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

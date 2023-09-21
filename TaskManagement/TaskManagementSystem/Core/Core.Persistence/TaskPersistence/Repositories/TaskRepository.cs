@@ -57,6 +57,12 @@ namespace TaskPersistence.Repositories
                 taskToUpdate.ProjectId = projectId;
                 //Update Task //Update Project
                 await UpdateAsync(taskToUpdate);
+                if (taskToUpdate.AssignedTo != null)
+                {
+                    var emailRequest = new EmailRequest() { To = taskToUpdate.AssignedTo, Subject = "Task Assigned to Project", Body = _notificationHelper.GenerateTaskAssignedToProjectEmailTemplate(taskToUpdate) };
+                    var jobId = BackgroundJob.Enqueue(() => _emailService.SendEmail(emailRequest));
+                    _logger.LogInformation($"Task was aCompleted email was sent   with  jobId {jobId} for email Notfication sent  ");
+                }
                 return new BaseResponse() { Success = true, Message = "Task Added Sucesfully to Project" };
             }
             catch (Exception ex)
@@ -88,7 +94,21 @@ namespace TaskPersistence.Repositories
 
                 if (parameters.DueForCurrent != 0)
                 {
-                    collection = collection.Where(a => a.DueDate.IsDueSoon(parameters.DueForCurrent));
+                  //  collection = collection.Where(a => a.DueDate.IsDueSoon(parameters.DueForCurrent));
+
+                    //   return  await collection;
+                    //var result = await collection.ToListAsync();
+                    //  result = result.WhereAsync(a => a.DueDate.IsDueSoon(parameters.DueForCurrent));
+                    //var result = collection.Select(a => a.DueDate.IsDueSoon(parameters.DueForCurrent));
+                    //return await result.ToListAsync();
+                    
+                    //var listMemory = await collection.ToListAsync();
+                    // listMemory.Where(a => a.DueDate.IsDueSoon(parameters.DueForCurrent));
+                    //return listMemory;s
+
+                    var listMemory = await collection.ToListAsync();
+                   List<Tasks> result2 = listMemory.Where(a => a.DueDate.IsDueSoon(parameters.DueForCurrent)).ToList();
+                    return result2;
                 }
                 return await collection.ToListAsync();
             }
@@ -98,6 +118,7 @@ namespace TaskPersistence.Repositories
                 return null;
             }
         }
+        //Mail should be seent to who is assgnrd t0
         public async Task<BaseResponse> RemoveTaskFromProject(Guid taskId, Guid projectId)
         {
             try
@@ -113,7 +134,12 @@ namespace TaskPersistence.Repositories
                 }
                 taskToUpdate.ProjectId = null;
                 await UpdateAsync(taskToUpdate);
-
+                if (taskToUpdate.AssignedTo != null)
+                {
+                    var emailRequest = new EmailRequest() { To = taskToUpdate.AssignedTo, Subject = "Task Removed From Project", Body = _notificationHelper.GenerateTaskRemoveFromProjectEmailTemplate(taskToUpdate) };
+                    var jobId = BackgroundJob.Enqueue(() => _emailService.SendEmail(emailRequest));
+                    _logger.LogInformation($"Task was aCompleted email was sent   with  jobId {jobId} for email Notfication sent  ");
+                }
                 return new BaseResponse() { Success = true, Message = "Task Removed Sucesfully From Project" };
             }
             catch (Exception ex)
@@ -142,8 +168,9 @@ namespace TaskPersistence.Repositories
                     var result = _notificationHelper.GenerateNotificationForTaskCompleted(taskToUpdate);
                     await _notificationRepository.AddAsync(result);
                    
-                     var emailRequest = new EmailRequest() { To = taskToUpdate.CreatedBy, Subject = "A NewTask Assigmente", Body = _notificationHelper.GenerateTaskCompleteEmailTemplate(taskToUpdate) };
+                     var emailRequest = new EmailRequest() { To = taskToUpdate.CreatedBy, Subject = "Task Completed Notfication", Body = _notificationHelper.GenerateTaskCompleteEmailTemplate(taskToUpdate) };
                     var jobId = BackgroundJob.Enqueue(() => _emailService.SendEmail(emailRequest));
+                    _logger.LogInformation($"Task was aCompleted email was sent   with  jobId {jobId} for email Notfication sent  ");
                 }
                 //Use Smtp to Fire Email
                 return new BaseResponse() { Success = true, Message = "Task Status Updated" };
@@ -176,6 +203,7 @@ namespace TaskPersistence.Repositories
                 await UpdateAsync(taskToUpdate);
                 var request = new EmailRequest() { To = userEmailtobeAssignedTo, Subject = "A NewTask Assigmente", Body = _notificationHelper.GenerateEmailNotficationTemplate(taskToUpdate) };
                 var jobId = BackgroundJob.Enqueue(() => _emailService.SendEmail(request));
+                _logger.LogInformation($"Task was assigned to user with {jobId} for email Notfication sent  ");
                 return new BaseResponse() { Success = true, Message = $"Task Sucessfully assigned to {userEmailtobeAssignedTo} " };
             }
             catch (Exception ex)
@@ -187,3 +215,5 @@ namespace TaskPersistence.Repositories
 
     }
 }
+///Note
+/// Calculated properties (nor unmapped properties) cannot be used in LINQ statements backed by EF.

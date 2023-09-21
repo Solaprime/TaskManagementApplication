@@ -13,3 +13,17 @@ C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Applicati
 C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.dll
 C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.pdb
 C:\Users\Arinola\Desktop\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.csproj.CopyComplete
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\bin\Debug\netcoreapp3.1\TaskApplication.deps.json
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\bin\Debug\netcoreapp3.1\TaskApplication.dll
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\bin\Debug\netcoreapp3.1\TaskApplication.pdb
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\bin\Debug\netcoreapp3.1\AppShared.dll
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\bin\Debug\netcoreapp3.1\TaskDomain.dll
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\bin\Debug\netcoreapp3.1\TaskDomain.pdb
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\bin\Debug\netcoreapp3.1\AppShared.pdb
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.csproj.AssemblyReference.cache
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.AssemblyInfoInputs.cache
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.AssemblyInfo.cs
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.csproj.CoreCompileInputs.cache
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.dll
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.pdb
