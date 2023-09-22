@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TaskManagemantApi.Repositories;
 using TaskPersistence.TasksManagementIdentity.Contract;
 
 namespace TaskManagemantApi.Controllers.V1
@@ -13,18 +14,15 @@ namespace TaskManagemantApi.Controllers.V1
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly ITokenService _tokenService;
-        private readonly IAuthenticationService _authService;
-        // ITokenService tokenService,
-        public AuthController(ITokenService tokenService, IAuthenticationService authService)
+        private readonly IUnitOfWork _unitOfWork;
+        public AuthController( IUnitOfWork unitOfWork)
         {
-            _tokenService = tokenService;
-            _authService = authService;
+            _unitOfWork = unitOfWork;
         }
         [HttpPost("Register")]
         public async Task<IActionResult> RegisterAsync(RegisterViewModel model)
         {
-                var result = await _authService.RegisterUserAsync(model);
+                var result = await _unitOfWork._authService.RegisterUserAsync(model);
                 if (result.Success)
                 {
                     //Find a way to Blu these Email
@@ -36,7 +34,7 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpPost("Login")]
         public async Task<IActionResult> LoginAsync([FromBody] LoginViewModel model)
         {
-                var result = await _authService.LoginUserAsync(model);
+                var result = await _unitOfWork._authService.LoginUserAsync(model);
                 if (result.Success)
                 {
                     return Ok(result);
@@ -46,7 +44,7 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpPost("RefreshToken")]
         public async Task<IActionResult> RefreshToken(TokenRequest tokenRequest)
         {
-                var result = await _tokenService.VerifyAndGenerateToken(tokenRequest);
+                var result = await _unitOfWork._tokenService.VerifyAndGenerateToken(tokenRequest);
                 if (result.Success == false)
                 {
                     return BadRequest(result);
@@ -61,7 +59,7 @@ namespace TaskManagemantApi.Controllers.V1
             {
                 return BadRequest("The string is empty");
             }
-            var result = await _authService.ForgetPasswordAsync(email);
+            var result = await _unitOfWork._authService.ForgetPasswordAsync(email);
             if (result.Success)
             {
                 return Ok(result);
@@ -72,7 +70,7 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpPost("ResetPassword")]
         public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
         {
-                var result = await _authService.ResetPasswordAsync(model);
+                var result = await _unitOfWork._authService.ResetPasswordAsync(model);
                 if (result.Success)
                 {
                     return Ok(result);

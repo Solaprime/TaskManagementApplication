@@ -35,4 +35,3 @@ C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Pers
 C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Persistence\TaskPersistence\obj\Debug\netcoreapp3.1\TaskPersistence.csproj.CoreCompileInputs.cache
 C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Persistence\TaskPersistence\obj\Debug\netcoreapp3.1\TaskPersistence.dll
 C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Persistence\TaskPersistence\obj\Debug\netcoreapp3.1\TaskPersistence.pdb
-C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Persistence\TaskPersistence\obj\Debug\netcoreapp3.1\TaskPersistence.csproj.CopyComplete

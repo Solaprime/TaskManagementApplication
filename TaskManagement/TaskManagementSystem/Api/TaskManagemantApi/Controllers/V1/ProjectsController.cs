@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using TaskApplication.Contracts;
 using TaskApplication.Models;
 using TaskDomain.Entities;
+using TaskManagemantApi.Repositories;
 
 namespace TaskManagemantApi.Controllers.V1
 {
@@ -16,26 +17,22 @@ namespace TaskManagemantApi.Controllers.V1
     [ApiController]
     public class ProjectsController : ControllerBase
     {
-
-        private readonly IAsyncRepository<Project> _projectRepository;
-        private readonly IMapper _mapper;
-        public ProjectsController(IAsyncRepository<Project> projectRepository, IMapper mapper)
+        private readonly IUnitOfWork _unitOfWork;
+        public ProjectsController( IUnitOfWork unitOfWork)
         {
-            _projectRepository = projectRepository;
-            _mapper = mapper;
+            _unitOfWork = unitOfWork;
         }
-
          [HttpGet]
          public async Task<ActionResult<List<Project>>> GetAll()
         {
-            var allProject =  await _projectRepository.ListAllAsync();
+            var allProject = await _unitOfWork._projectRepository.ListAllAsync();
             return Ok(allProject);
         }
 
         [HttpGet("{projectId}")]
         public async Task<ActionResult<Project>> GetSingle(Guid projectId)
         {
-            var allProject = await _projectRepository.GetByIdAsync(projectId);
+            var allProject = await _unitOfWork._projectRepository.GetByIdAsync(projectId);
             if (allProject == null)
             {
                 return NotFound();
@@ -45,12 +42,12 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpDelete("{projectId}", Name ="GetProjectById")]
         public async Task<IActionResult> DeleteProject(Guid projectId)
         {
-            var project = await _projectRepository.GetByIdAsync(projectId);
+            var project = await _unitOfWork._projectRepository.GetByIdAsync(projectId);
             if (project == null)
             {
                 return NotFound();
             }
-            await _projectRepository.SoftDeleteAsync(projectId);
+            await _unitOfWork._projectRepository.SoftDeleteAsync(projectId);
             return NoContent();
         }
         //Update
@@ -60,8 +57,8 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpPost]
         public async Task<ActionResult<Project>> CreateNew(CreateProjectModel modelDto)
         {
-            var projectEntity = _mapper.Map<Project>(modelDto);
-            await _projectRepository.AddAsync(projectEntity);
+            var projectEntity = _unitOfWork._mapper.Map<Project>(modelDto);
+            await _unitOfWork._projectRepository.AddAsync(projectEntity);
           //  var taskToReturn = _mapper.Map<CreateTasksModel>(projectEntity);
             return CreatedAtRoute("GetById", new { Id = projectEntity.Id }, projectEntity);
         }
@@ -72,20 +69,20 @@ namespace TaskManagemantApi.Controllers.V1
          JsonPatchDocument<CreateProjectModel> patchDocument)
         {
             //Check if Product Exist 
-            if (!await _projectRepository.ExistAsync(projectId))
+            if (!await _unitOfWork._projectRepository.ExistAsync(projectId))
             {
                 return NotFound();
             }
-            var projectFromRepo = await _projectRepository.GetByIdAsync(projectId);
-            var projectToPatch = _mapper.Map<CreateProjectModel>(projectFromRepo);
+            var projectFromRepo = await _unitOfWork._projectRepository.GetByIdAsync(projectId);
+            var projectToPatch = _unitOfWork._mapper.Map<CreateProjectModel>(projectFromRepo);
             // add validation
             patchDocument.ApplyTo(projectToPatch);
             //if (!TryValidateModel(projectToPatch))
             //{
             //    return ValidationProblem(ModelState);
             //}
-            _mapper.Map(projectToPatch, projectFromRepo);
-            await _projectRepository.UpdateAsync(projectFromRepo);
+            _unitOfWork._mapper.Map(projectToPatch, projectFromRepo);
+            await _unitOfWork._projectRepository.UpdateAsync(projectFromRepo);
 
             return NoContent();
         }

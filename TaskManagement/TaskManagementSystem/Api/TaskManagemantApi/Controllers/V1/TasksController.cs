@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using TaskApplication.Contracts;
 using TaskApplication.Models;
 using TaskDomain.Entities;
+using TaskManagemantApi.Repositories;
 
 namespace TaskManagemantApi.Controllers.V1
 {
@@ -21,12 +22,10 @@ namespace TaskManagemantApi.Controllers.V1
     [ApiController]
     public class TasksController : ControllerBase
     {
-       private readonly ITaskRepository _taskRepository;
-        private readonly IMapper _mapper;
-        public TasksController(ITaskRepository taskRepository, IMapper mapper)
+        private readonly IUnitOfWork _unitOfWork;
+        public TasksController( IUnitOfWork unitOfWork)
         {
-            _taskRepository = taskRepository;
-            _mapper = mapper;
+            _unitOfWork = unitOfWork;
         }
         /// <summary>
         /// Get All Task in our Db
@@ -35,7 +34,7 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpGet]  
         public async Task<ActionResult<List<Tasks>>> GetAllTask()
         {
-            var allTask = await _taskRepository.ListAllAsync();
+            var allTask = await _unitOfWork._taskRepository.ListAllAsync();
             return Ok(allTask);
         }
         /// <summary>
@@ -46,7 +45,7 @@ namespace TaskManagemantApi.Controllers.V1
        [HttpGet("{Id}" , Name ="GetTaskById")]
        public async Task<ActionResult<Tasks>> GetTaskById(Guid Id)
         {
-            var task = await _taskRepository.GetByIdAsync(Id);
+            var task = await _unitOfWork._taskRepository.GetByIdAsync(Id);
             if (task == null)
             {
                 return NotFound();
@@ -61,12 +60,12 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpDelete("{Id}")]
         public async Task<IActionResult> SoftDeleteTask(Guid Id)
         {
-            var task = await _taskRepository.GetByIdAsync(Id);
+            var task = await _unitOfWork._taskRepository.GetByIdAsync(Id);
             if (task == null)
             {
                 return NotFound();
             }
-            await _taskRepository.SoftDeleteAsync(Id);
+            await _unitOfWork._taskRepository.SoftDeleteAsync(Id);
             return NoContent();
         }
         /// <summary>
@@ -79,12 +78,12 @@ namespace TaskManagemantApi.Controllers.V1
         public async Task<ActionResult> UpdateTask(Guid taskId,
            JsonPatchDocument<CreateTasksModel> patchDocument)
         {
-            if (!await _taskRepository.ExistAsync(taskId))
+            if (!await _unitOfWork._taskRepository.ExistAsync(taskId))
             {
                 return NotFound();
             }
-            var taskFromRepo = await _taskRepository.GetByIdAsync(taskId);
-            var taskToPatch = _mapper.Map<CreateTasksModel>(taskFromRepo);
+            var taskFromRepo = await _unitOfWork._taskRepository.GetByIdAsync(taskId);
+            var taskToPatch = _unitOfWork._mapper.Map<CreateTasksModel>(taskFromRepo);
             // add validation, Since we dont have Validation on our Models
            // patchDocument.ApplyTo(taskToPatch, ModelState);
             patchDocument.ApplyTo(taskToPatch);
@@ -92,8 +91,8 @@ namespace TaskManagemantApi.Controllers.V1
             //{
             //    return ValidationProblem(ModelState);
             //}
-            _mapper.Map(taskToPatch, taskFromRepo);
-             await   _taskRepository.UpdateAsync(taskFromRepo);
+            _unitOfWork._mapper.Map(taskToPatch, taskFromRepo);
+             await _unitOfWork._taskRepository.UpdateAsync(taskFromRepo);
             return NoContent();
         }
         /// <summary>
@@ -105,9 +104,9 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpPost]
         public async Task<ActionResult<Tasks>> CreateNewTask(CreateTasksModel modelDto)
         {
-            var taskEntity = _mapper.Map<Tasks>(modelDto);
-            await _taskRepository.AddAsync(taskEntity);
-            var taskToReturn = _mapper.Map<CreateTasksModel>(taskEntity);
+            var taskEntity = _unitOfWork._mapper.Map<Tasks>(modelDto);
+            await _unitOfWork._taskRepository.AddAsync(taskEntity);
+            var taskToReturn = _unitOfWork._mapper.Map<CreateTasksModel>(taskEntity);
              return CreatedAtRoute("GetTaskById", new { Id = taskEntity.Id }, taskEntity);
           
         }
@@ -121,7 +120,7 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpGet("GetTaskBased")]
         public async Task<ActionResult<List<Tasks>>> GetTaskBasedOnParameters([FromQuery] TaskResourceParameters taskResource)
         {
-            var taskToReturn = await _taskRepository.GetTaskBased(taskResource);
+            var taskToReturn = await _unitOfWork._taskRepository.GetTaskBased(taskResource);
             if (taskToReturn == null)
             {
                 return BadRequest("Sorry we cant find what you are looking for");
@@ -136,7 +135,7 @@ namespace TaskManagemantApi.Controllers.V1
         public async Task<ActionResult<List<Tasks>>> GetTaskDueInaWeek()
         {
             var parameters = new TaskResourceParameters() { DueForCurrent = 7 };
-            var taskToReturn = await _taskRepository.GetTaskBased(parameters);
+            var taskToReturn = await _unitOfWork._taskRepository.GetTaskBased(parameters);
             if (taskToReturn == null)
             {
                 return BadRequest("Sorry No task due for current Week");
@@ -152,7 +151,7 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpPost("AddTaskToProject/{taskId}/{projectId}")]
         public async Task<ActionResult<BaseResponse>> AddTaskToProject(Guid taskId, Guid projectId)
         { 
-            var result = await _taskRepository.AddTaskToProject(taskId, projectId);
+            var result = await _unitOfWork._taskRepository.AddTaskToProject(taskId, projectId);
             if (!result.Success)
             {
                 return BadRequest(result.Message);
@@ -168,7 +167,7 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpPost("ChangeTaskStatus/{taskId}/{taskStatus}")]
         public async Task<ActionResult<BaseResponse>> ChangeTaskStatus(Guid taskId, TaskStatuses taskStatus)
         {
-            var result = await _taskRepository.ChangeTasksStatus(taskId, taskStatus);
+            var result = await _unitOfWork._taskRepository.ChangeTasksStatus(taskId, taskStatus);
             if (!result.Success)
             {
                 return BadRequest(result.Message);
@@ -185,7 +184,7 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpPost("AssignTaskToUser/{taskId}/{email}")]
         public async Task<ActionResult<BaseResponse>> AssignTaskToUser(Guid taskId, string email)
         {
-            var result = await _taskRepository.AssignTasksToUser(email, taskId);
+            var result = await _unitOfWork._taskRepository.AssignTasksToUser(email, taskId);
             if (!result.Success)
             {
                 return BadRequest(result.Message);
