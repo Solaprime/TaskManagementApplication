@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TaskApplication.CustomAnnotations;
 using TaskDomain.Entities;
 
 namespace TaskApplication.Models
 {
+    //[DateTimeMustNotBeLessThanToday]
+    [DateTimeMustNotBeLessThanToday]
    public  class CreateTasksModel
     {
         public string Title { get; set; }

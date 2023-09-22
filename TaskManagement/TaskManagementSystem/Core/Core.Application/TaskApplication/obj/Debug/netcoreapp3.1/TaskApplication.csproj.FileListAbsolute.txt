@@ -27,3 +27,4 @@ C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Appl
 C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.csproj.CoreCompileInputs.cache
 C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.dll
 C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.pdb
+C:\Users\Arinola\Desktop\Flow\TaskManagement\TaskManagementSystem\Core\Core.Application\TaskApplication\obj\Debug\netcoreapp3.1\TaskApplication.csproj.CopyComplete
