@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TaskApplication;
+using TaskManagemantApi.Repositories;
 using TaskManagemantApi.TaskManagementBackground;
 using TaskPersistence;
 
@@ -76,6 +77,8 @@ namespace TaskManagemantApi
                });
             });
             services.AddHostedService<TaskExpiryNotification>();
+            //Unit of Work Resolvation
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

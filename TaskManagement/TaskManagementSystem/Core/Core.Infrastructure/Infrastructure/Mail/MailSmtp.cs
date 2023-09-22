@@ -32,7 +32,7 @@ namespace Infrastructure.Mail
                 {
                     smtp.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls);
                     //I removed the password to authenticate to Smtp, since i will be pUrsing the code to sourceControl
-                    smtp.Authenticate("", "");
+                     smtp.Authenticate("", "");
                     smtp.Send(email);
                     var result = smtp.Send(email);
                 }

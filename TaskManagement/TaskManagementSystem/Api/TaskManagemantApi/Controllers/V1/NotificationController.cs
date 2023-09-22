@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using TaskApplication.Contracts;
 using TaskApplication.Models;
 using TaskDomain.Entities;
+using TaskManagemantApi.Repositories;
 
 namespace TaskManagemantApi.Controllers.V1
 {
@@ -19,12 +20,10 @@ namespace TaskManagemantApi.Controllers.V1
     {
         //Crud Notfication
         //Mark Notification as read Or Unread
-        private readonly INotificationRepository _notifcationRepository;
-        private readonly IMapper _mapper;
-        public NotificationController(INotificationRepository notifcationRepository, IMapper mapper)
+        private readonly IUnitOfWork _unitOfWork;
+        public NotificationController( IUnitOfWork unitOfWork)
         {
-            _notifcationRepository = notifcationRepository;
-            _mapper = mapper;
+            _unitOfWork = unitOfWork;
         }
 
         /// <summary>
@@ -34,7 +33,7 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpGet]
         public async Task<ActionResult<List<Notification>>> GetAllNotification()
         {
-            var allNotification = await _notifcationRepository.ListAllAsync();
+            var allNotification = await _unitOfWork._notifcationRepository.ListAllAsync();
             return Ok(allNotification);
         }
         /// <summary>
@@ -45,7 +44,7 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpGet("{Id}", Name = "GetNotificationById")]
         public async Task<ActionResult<Notification>> GetNotificationById(Guid Id)
         {
-            var notification = await _notifcationRepository.GetByIdAsync(Id);
+            var notification = await _unitOfWork._notifcationRepository.GetByIdAsync(Id);
             if (notification == null)
             {
                 return NotFound();
@@ -60,12 +59,12 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpDelete("{Id}")]
         public async Task<IActionResult> SoftDeleteNotification(Guid Id)
         {
-            var notification = await _notifcationRepository.GetByIdAsync(Id);
+            var notification = await _unitOfWork._notifcationRepository.GetByIdAsync(Id);
             if (notification == null)
             {
                 return NotFound();
             }
-            await _notifcationRepository.SoftDeleteAsync(Id);
+            await _unitOfWork._notifcationRepository.SoftDeleteAsync(Id);
             return NoContent();
 
         }
@@ -80,12 +79,12 @@ namespace TaskManagemantApi.Controllers.V1
            JsonPatchDocument<NotificationModel> patchDocument)
         {
             //Check if Product Exist 
-            if (!await _notifcationRepository.ExistAsync(Id))
+            if (!await _unitOfWork._notifcationRepository.ExistAsync(Id))
             {
                 return NotFound();
             }
-            var notificationFromRepo = await _notifcationRepository.GetByIdAsync(Id);
-            var notificationToPatch = _mapper.Map<NotificationModel>(notificationFromRepo);
+            var notificationFromRepo = await _unitOfWork._notifcationRepository.GetByIdAsync(Id);
+            var notificationToPatch = _unitOfWork._mapper.Map<NotificationModel>(notificationFromRepo);
             // add validation, Since we dont have Validation on our Models
             // patchDocument.ApplyTo(taskToPatch, ModelState);
             patchDocument.ApplyTo(notificationToPatch);
@@ -93,8 +92,8 @@ namespace TaskManagemantApi.Controllers.V1
             //{
             //    return ValidationProblem(ModelState);
             //}
-            _mapper.Map(notificationToPatch, notificationFromRepo);
-            await _notifcationRepository.UpdateAsync(notificationFromRepo);
+            _unitOfWork._mapper.Map(notificationToPatch, notificationFromRepo);
+            await _unitOfWork._notifcationRepository.UpdateAsync(notificationFromRepo);
             return NoContent();
         }
         /// <summary>
@@ -105,9 +104,9 @@ namespace TaskManagemantApi.Controllers.V1
         [HttpPost]
         public async Task<ActionResult<Tasks>> CreateNewNotification(NotificationModel modelDto)
         {
-            var notificationEntity = _mapper.Map<Notification>(modelDto);
-            await _notifcationRepository.AddAsync(notificationEntity);
-            var taskToReturn = _mapper.Map<NotificationModel>(notificationEntity);
+            var notificationEntity = _unitOfWork._mapper.Map<Notification>(modelDto);
+            await _unitOfWork._notifcationRepository.AddAsync(notificationEntity);
+            var taskToReturn = _unitOfWork._mapper.Map<NotificationModel>(notificationEntity);
             return CreatedAtRoute("GetNotificationById", new { Id = notificationEntity.Id }, notificationEntity);
            
         }
@@ -121,7 +120,7 @@ namespace TaskManagemantApi.Controllers.V1
         //Enum Flow
         public async Task<ActionResult<BaseResponse>> ChangeNotificationStatus(Guid notificationId, NotificationStatus notifyStatus)
         {
-            var result = await _notifcationRepository.ChangeNotficationStatus(notificationId, notifyStatus);
+            var result = await _unitOfWork._notifcationRepository.ChangeNotficationStatus(notificationId, notifyStatus);
             if (!result.Success)
             {
                 return BadRequest(result.Message);

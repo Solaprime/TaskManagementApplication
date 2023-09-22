@@ -13,7 +13,12 @@ namespace AppShared.Helpers
             //19th September 2023
             DateTimeOffset today = DateTimeOffset.Now;
             DateTimeOffset oneWeekFromToday = today.AddDays(numberOfDays);
-            return dueDate < oneWeekFromToday;
+            if (dueDate < oneWeekFromToday && dueDate >= today)
+            {
+                return true;
+            }
+            return false;
+          //  return dueDate < oneWeekFromToday;
         }
         //Due date 29th 9 2023
         //today 19th 9 2023     26
